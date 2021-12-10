@@ -3,14 +3,13 @@ using WormsWorld.Entity;
 
 namespace WormsWorld
 {
-    class Program
+    internal static class Program
     {
-        static void Main()
+        private static void Main()
         {
-            StreamWriter streamWriter = new StreamWriter("AboutWorms.txt");
-            World world = new World(streamWriter);
+            using var streamWriter = new StreamWriter("AboutWorms.txt");
+            var world = new World(streamWriter);
             world.Start("John");
-            streamWriter.Close();
         }
     }
 }

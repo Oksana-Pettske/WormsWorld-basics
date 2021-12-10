@@ -13,8 +13,8 @@ namespace WormsWorld.Entity
         
         public void Start(string name)
         {
-            Worm worm = new Worm(name, new CircleMover());
-            for (int day = 0; day < 100; day++)
+            var worm = new Worm(name, new CircleMover());
+            for (var day = 0; day < 100; day++)
             {
                 worm.Move(day);
                 WriteHistory(worm);
